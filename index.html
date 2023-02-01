@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ID-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alexander Proskiw</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/6252dfd7f6.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+    <!--header-->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Former Environmental Engineer</p>
+                <p>Current Computer Science Student</p>
+                <h2>Hi, I'm <span>Alexander Proskiw</span></h2>
+            </div>    
+        </div>
+    </div>
+
+    <!--about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Engineer.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title"><u>About Me</u></h2>
+                    <p> 
+                    I am a UBC student pursuing a second degree in computer science. My previous degree was in environmental engineering.
+                    I worked for approximately 4 years as an engineer-in-training before returning to school to advance my technological skills.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('extracurriculars')">Extracurriculars</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java</span><br>Desktop Programs</li>
+                            <li><span>Python</span><br>Data Science</li>
+                            <li><span>HTML/CSS</span><br>Web Development</li>
+                            <li><span>R</span><br>Statistical Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Bachelor of Computer Science - UBC</li>
+                            <li><span>2014 - 2018</span><br>BASc in Environmental Engineering - UNBC/UBC<br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="extracurriculars">
+                        <ul>
+                            <li><span>2022</span><br>NASA International Space Apps Challenge</li>
+                            <li><span>2016</span><br>STEM Spotlight Awards - Infrastructure Category Winner</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--experience-->
+    <div id="experience">
+        <div class="container">
+            <h2 class="sub-title"><u>Experience</u></h2>
+            <div class="outer">
+            <div class="card">
+                <div class="info">
+                <h3 class="title">Environmental Engineer (2019 - 2022)<br>Envirochem Services</h3>
+                <p>Completed technical and project management activities on a wide range of projects within British Columbia 
+                    including contaminated site investigations, construction environmental management, erosion and sediment control, 
+                    environmental permitting, and spill response activities.</p>
+                    <div class="achievement-list">
+                        <ul>
+                            <li>Supported the creation of a lab importer program which analyzes environmental data against regulatory standards.</li>
+                            <li>Project manager for approximately 20 projects ranging in value from $5k to $50k. </li>
+                            <li>Treated over 800 million liters of water to BC Water Quality Guidelines at a major coal terminal expansion project in North Vancouver, BC.</li>
+                            <li>Conducted spill recovery operations for a 10,000 liter diesel spill at a remote logging camp on Vancouver Island.</li>
+                            <li>Created an erosion and sediment control (ESC) plan and conducted ESC monitoring for a project involving the upland placement 
+                                of 500,000 m<sup>3</sup> of dredged sand along the Fraser River. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                <h3 class="title">Head Fishing / Ecotourism Guide (2014 - 2018)<br>Foggy Point Charter Services</h3>
+                <p>As the head guide, I was responsible for both my vessel and client satisfaction during daily fishing expeditions and wildlife viewing trips.</p>
+                    <div class="achievement-list">
+                        <ul>
+                            <li>Guided 400 trips over 5 seasons.</li>
+                            <li>Ensured client safety in high-risk environments.</li>
+                            <li>Led group trips where teamwork and communication between vessels was essential.</li>
+                            <li>Developed soft skills related to client interaction and marketing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h2 class="sub-title"><u>My Portfolio</u></h2>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Spaceship Flying Game</h3>
+                        <p>A game where you fly a spaceship in an ever-shrinking randomly-generated tunnel.
+                            Made in the Racket programming language.
+                        </p>
+                        <a href="https://github.com/alexproskiw/DrRacketSpaceshipGame">Click here for details</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-2.jpg">
+                    <div class="layer">
+                        <h3>Bank Account Simulator</h3>
+                        <p>A Java program that simulates a bank account, allowing you to check your balance, make deposits and withdrawls,
+                            view your previous transaction, and invest your money.
+                        </p>
+                        <a href="https://github.com/alexproskiw/BankAccountSimulator">Click here for details</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-3.jpg">
+                    <div class="layer">
+                        <h3>Dance of Irradiance</h3>
+                        <p>A game collaboratively developed during the NASA International Space Apps Challenge.
+                            Move your astronaut to collect space garbage while avoiding solar flares!
+                        </p>
+                        <a href="https://github.com/ericlaycock/NASAhackathon">Click here for details</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/alexproskiw" class="btn">See Additional Projects At My GitHub</a>
+        </div>
+    </div>
+
+    <!--contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="sub-title"><u>Contact Me</u></h2>
+                    <p><i class="fa-solid fa-paper-plane"></i>aproskiw@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>250-692-9302</p>
+                    <div>
+                        <div class="social-icons">
+                            <a href="www.linkedin.com/in/alexander-proskiw-680578178"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/alexproskiw"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <a href="Images/Proskiw Resume.pdf" download class="btn btn2">Download Resume</a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>    
+        </div>
+        <div class="copyright">
+            <p>Copyright © Alex Proskiw 2023</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    </body>
+
+</html>
