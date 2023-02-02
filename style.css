@@ -358,6 +358,9 @@ nav .fas{
     .about-col-2{
         font-size: 14px;
     }
+    .tab-titles{
+        margin: 20px 0 20px;
+    }
     .tab-links{
         font-size: 16px;
         margin-right: 20px;
@@ -371,4 +374,9 @@ nav .fas{
     .title{
         font-size: 16px;
     }
+}
+#msg{
+    color: #F5F5F5;
+    margin-top: -40px;
+    display: block;
 }

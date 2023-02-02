@@ -132,7 +132,7 @@
                         <p>A game where you fly a spaceship in an ever-shrinking randomly-generated tunnel.
                             Made in the Racket programming language.
                         </p>
-                        <a href="https://github.com/alexproskiw/DrRacketSpaceshipGame">Click here for details</a>
+                        <a href="https://github.com/alexproskiw/DrRacketSpaceshipGame" target="_blank">Click here for details</a>
                     </div>
                 </div>
                 <div class="work">
@@ -142,7 +142,7 @@
                         <p>A Java program that simulates a bank account, allowing you to check your balance, make deposits and withdrawls,
                             view your previous transaction, and invest your money.
                         </p>
-                        <a href="https://github.com/alexproskiw/BankAccountSimulator">Click here for details</a>
+                        <a href="https://github.com/alexproskiw/BankAccountSimulator" target="_blank">Click here for details</a>
                     </div>
                 </div>
                 <div class="work">
@@ -152,11 +152,11 @@
                         <p>A game collaboratively developed during the NASA International Space Apps Challenge.
                             Move your astronaut to collect space garbage while avoiding solar flares!
                         </p>
-                        <a href="https://github.com/ericlaycock/NASAhackathon">Click here for details</a>
+                        <a href="https://github.com/ericlaycock/NASAhackathon" target="_blank">Click here for details</a>
                     </div>
                 </div>
             </div>
-            <a href="https://github.com/alexproskiw" class="btn">See Additional Projects At My GitHub</a>
+            <a href="https://github.com/alexproskiw" class="btn" target="_blank">See Additional Projects At My GitHub</a>
         </div>
     </div>
 
@@ -170,19 +170,20 @@
                     <p><i class="fa-solid fa-square-phone"></i>250-692-9302</p>
                     <div>
                         <div class="social-icons">
-                            <a href="www.linkedin.com/in/alexander-proskiw-680578178"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/alexproskiw"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/alexander-proskiw-680578178" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/alexproskiw" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </div>
                         <a href="Images/Proskiw Resume.pdf" download class="btn btn2">Download Resume</a>
                     </div>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>    
         </div>
@@ -217,6 +218,26 @@
         function closemenu(){
             sidemenu.style.right = "-200px";
         }
+    </script>
+
+    <!---contact form script from https://github.com/jamiewilson/form-to-google-sheets-->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWTGAHRjFrodhcgy7lv8AxH7AGluOfeag2Uc-QabJBPCc8ltDJxCC-8DTJoUisvpx5bw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+  
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully"
+                setTimeout(function() {
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
     </body>
