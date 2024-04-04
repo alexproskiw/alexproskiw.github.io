@@ -249,6 +249,13 @@ nav ul li a:hover::after{
 .btn:hover{
     background: #fe6900;
 }
+.work img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
 
 /*--contact--*/
 .contact-left{
@@ -383,4 +390,10 @@ nav .fas{
     color: #F5F5F5;
     margin-top: -40px;
     display: block;
+}
+@media (max-width: 1000px) {
+    .work img {
+        max-width: 100%;
+        max-height: none;
+    }
 }
